@@ -1,0 +1,28 @@
+.pokemon-body {
+  padding: 1rem 20px;
+  min-height: 700px;
+
+  button {
+    padding: 8px 16px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+  }
+
+  button:hover {
+    background-color: lightgray;
+  }
+}
+
+.pokemons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pokemons-list {
+  ul {
+    list-style: none;
+  }
+}
