@@ -1,0 +1,8 @@
+<div [ngStyle]="{
+  border: pokemon.damage > 50 ? '2px solid red' : null
+}" class="pokemon-card">
+  <strong>{{ pokemon.name }}</strong>
+  <img [src]="pokemon.imgSource"  alt="Image" />
+  <p>Damage: {{ pokemon.damage }}</p>
+  <button (click)="handleCatch()">{{ catchBtnText }}</button>
+</div>

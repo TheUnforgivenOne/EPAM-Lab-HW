@@ -1,0 +1,19 @@
+<div class="pokemon-body">
+  <h2>Pokemons</h2>
+  <button (click)="toggleView()">Toggle view</button>
+  <div [ngSwitch]="cardsView">
+    <div *ngSwitchCase="true" class="pokemons-grid">
+      <app-pokemon-card
+        *ngFor="let pokemon of pokemons"
+        [pokemon]="pokemon"
+      ></app-pokemon-card>
+    </div>
+    <div *ngSwitchCase="false" class="pokemons-list">
+      <ul>
+        <li *ngFor="let pokemon of pokemons">
+          Id: {{ pokemon.id }} | Name: {{ pokemon.name }} | Damage: {{ pokemon.damage }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
