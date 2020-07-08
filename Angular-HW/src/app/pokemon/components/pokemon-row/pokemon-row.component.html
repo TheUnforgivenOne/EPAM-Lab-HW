@@ -1,1 +1,6 @@
-<p>pokemon-row works!</p>
+<li class="pokemon-row">
+  <img [src]="pokemon.imgSource" [alt]="pokemon.name">
+  <p>{{ pokemon.name }}</p>
+  <p [ngStyle]="{color: pokemon.damage > 50 ? 'red' : null}">Damage: {{ pokemon.damage }}</p>
+  <button (click)="handleCatch()">{{ isCaught ? 'Release' : 'Catch' }}</button>
+</li>

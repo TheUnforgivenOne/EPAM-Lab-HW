@@ -12,19 +12,11 @@ export class PokemonCardComponent implements OnInit {
   constructor() {}
 
   isCaught = false;
-  catchBtnText = 'Catch';
 
   ngOnInit(): void {}
 
-  handleCatch() {
-    if (this.isCaught) {
-      console.log(`Pokemon ${this.pokemon.name} has been released!`);
-    } else {
-      console.log(`Pokemon ${this.pokemon.name} has been caught!`);
-    }
+  handleCatch(): void {
     this.isCaught = !this.isCaught;
-    this.catchBtnText === 'Catch'
-      ? (this.catchBtnText = 'Release')
-      : (this.catchBtnText = 'Catch');
+    console.log(`Pokemon ${this.pokemon.name} ${this.isCaught ? 'has been caught!' : 'has been released!'}`);
   }
 }

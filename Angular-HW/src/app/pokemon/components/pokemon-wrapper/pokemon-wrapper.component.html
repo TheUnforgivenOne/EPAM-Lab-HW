@@ -10,9 +10,10 @@
     </div>
     <div *ngSwitchCase="false" class="pokemons-list">
       <ul>
-        <li *ngFor="let pokemon of pokemons">
-          Id: {{ pokemon.id }} | Name: {{ pokemon.name }} | Damage: {{ pokemon.damage }}
-        </li>
+        <app-pokemon-row
+          *ngFor="let pokemon of pokemons"
+          [pokemon]="pokemon"
+        ></app-pokemon-row>
       </ul>
     </div>
   </div>

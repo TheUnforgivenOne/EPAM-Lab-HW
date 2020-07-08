@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pokemon } from "../pokemon-wrapper/pokemon-wrapper.component";
 
 @Component({
   selector: 'app-pokemon-row',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-row.component.scss']
 })
 export class PokemonRowComponent implements OnInit {
+  @Input() pokemon: Pokemon;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  isCaught = false;
+
+  ngOnInit(): void {}
+
+  handleCatch(): void {
+    this.isCaught = !this.isCaught;
+    console.log(`Pokemon ${this.pokemon.name} ${this.isCaught ? 'has been caught!' : 'has been released!'}`);
   }
-
 }

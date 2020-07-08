@@ -2,7 +2,7 @@
   border: pokemon.damage > 50 ? '2px solid red' : null
 }" class="pokemon-card">
   <strong>{{ pokemon.name }}</strong>
-  <img [src]="pokemon.imgSource"  alt="Image" />
+  <img [src]="pokemon.imgSource"  [alt]="pokemon.name" />
   <p>Damage: {{ pokemon.damage }}</p>
-  <button (click)="handleCatch()">{{ catchBtnText }}</button>
+  <button (click)="handleCatch()">{{ isCaught ? 'Release' : 'Catch' }}</button>
 </div>
