@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokemonBodyComponent } from './pokemon-body.component';
+import { PokemonWrapperComponent } from './pokemon-wrapper.component';
 
-describe('PokemonBodyComponent', () => {
-  let component: PokemonBodyComponent;
-  let fixture: ComponentFixture<PokemonBodyComponent>;
+describe('PokemonWrapperComponent', () => {
+  let component: PokemonWrapperComponent;
+  let fixture: ComponentFixture<PokemonWrapperComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PokemonBodyComponent ]
+      declarations: [ PokemonWrapperComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PokemonBodyComponent);
+    fixture = TestBed.createComponent(PokemonWrapperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

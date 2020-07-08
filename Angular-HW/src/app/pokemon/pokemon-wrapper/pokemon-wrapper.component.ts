@@ -8,11 +8,11 @@ export interface Pokemon {
 }
 
 @Component({
-  selector: 'app-pokemon-body',
-  templateUrl: './pokemon-body.component.html',
-  styleUrls: ['./pokemon-body.component.scss']
+  selector: 'app-pokemon-wrapper',
+  templateUrl: './pokemon-wrapper.component.html',
+  styleUrls: ['./pokemon-wrapper.component.scss']
 })
-export class PokemonBodyComponent implements OnInit {
+export class PokemonWrapperComponent implements OnInit {
 
   constructor() { }
 
