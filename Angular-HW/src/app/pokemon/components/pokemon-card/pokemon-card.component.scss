@@ -1,0 +1,28 @@
+.pokemon-card {
+  margin: .5rem 0;
+  padding: 1rem 2rem;
+  border: 1px dashed black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition-duration: 0.2s;
+  }
+
+  button:hover {
+    background-color: darkgreen;
+  }
+}

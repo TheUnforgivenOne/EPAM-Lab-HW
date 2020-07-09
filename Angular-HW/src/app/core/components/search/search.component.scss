@@ -1,0 +1,24 @@
+.search {
+
+  input {
+    height: 20px;
+    width: 250px;
+    margin-right: .5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  button {
+    height: 25px;
+    width: 70px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition-duration: 0.2s;
+  }
+
+  button:hover {
+    background-color: lightgray;
+  }
+}

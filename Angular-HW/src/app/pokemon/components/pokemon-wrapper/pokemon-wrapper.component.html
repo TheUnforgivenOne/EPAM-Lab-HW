@@ -1,0 +1,23 @@
+<div class="pokemon-wrapper">
+  <div class="pokemon-header">
+    <button (click)="toggleView()">Toggle view</button>
+  </div>
+  <div [ngSwitch]="cardsView">
+    <div *ngSwitchCase="true" class="pokemons-grid">
+      <app-pokemon-card
+        *ngFor="let pokemon of pokemons"
+        [pokemon]="pokemon"
+        (handleCatch)="toggleIsCaught($event)"
+      ></app-pokemon-card>
+    </div>
+    <div *ngSwitchCase="false" class="pokemons-list">
+      <ul>
+        <app-pokemon-row
+          *ngFor="let pokemon of pokemons"
+          [pokemon]="pokemon"
+          (handleCatch)="toggleIsCaught($event)"
+        ></app-pokemon-row>
+      </ul>
+    </div>
+  </div>
+</div>
