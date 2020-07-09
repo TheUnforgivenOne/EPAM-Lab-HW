@@ -1,14 +1,21 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { Pokemon } from '../pokemon-wrapper/pokemon-wrapper.component';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { PokemonModel } from '../../models/pokemon.model';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PokemonCardComponent implements OnInit {
-  @Input() pokemon: Pokemon;
+  @Input() pokemon: PokemonModel;
   @Output() handleCatch: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
