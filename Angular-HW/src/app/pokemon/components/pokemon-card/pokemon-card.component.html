@@ -4,5 +4,5 @@
   <strong>{{ pokemon.name }}</strong>
   <img [src]="pokemon.imgSource"  [alt]="pokemon.name" />
   <p>Damage: {{ pokemon.damage }}</p>
-  <button (click)="handleCatch()">{{ isCaught ? 'Release' : 'Catch' }}</button>
+  <button (click)="handleCatch.emit(pokemon)">{{ pokemon.isCaught ? 'Release' : 'Catch' }}</button>
 </div>
